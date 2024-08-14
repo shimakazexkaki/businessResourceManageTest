@@ -1,3 +1,4 @@
+using Microsoft.Identity.Client;
 using System.Windows.Forms;
 using 員工資料管理.Models;
 
@@ -5,10 +6,10 @@ namespace 員工資料管理
 {
     public partial class Form1 : Form
     {
+        private Form2 newForm;
         public Form1()
         {
             InitializeComponent();
-            saveButton.Click += saveButton_Click;
         }
 
         /*private void MainForm_Load(object sender, EventArgs e )
@@ -99,24 +100,65 @@ namespace 員工資料管理
             LoadForm(form);
         }*/
 
-        private void addButton_Click(object sender, EventArgs e)
+        /*public 員工資料模型 currentEmployeeData { get; private set; } = new 員工資料模型
         {
-            Form2 newForm = new Form2();
+            LDF_登入密碼 = "password",
+            LDF_操作權限 = "admin",
+            性別 = "男性",
+            建檔人 = "admin",
+            建檔日期 = System.DateTime.Now,
+            員工姓名 = "admin",
+            員工編號 = 1000,
+            啟停狀態0停用1啟用 = true
+        }; */
+        public void addButton_Click(object sender, EventArgs e)
+        {
+
+            newForm = new Form2(this);
+            
+            //newForm.OnDataSaved += newForm_OnDataSaved;
             newForm.MdiParent = this;
             newForm.Show();
         }
 
-        private void saveButton_Click(object sender, EventArgs e)
+
+        /*public void saveButton_Click(object sender, EventArgs e)
         {
-            Form2 activeForm2 = this.ActiveMdiChild as Form2;
-            if (activeForm2 != null)
+            // 保存 currentEmployeeData 到數據庫
+            try
             {
-                activeForm2.SaveData();
+                using (var dbContext = new AppDbContext())
+                {
+                    var existingEmployee = dbContext.員工資料.Find(currentEmployeeData.員工編號);
+                    if (existingEmployee != null)
+                    {
+                        dbContext.Entry(existingEmployee).CurrentValues.SetValues(currentEmployeeData);
+                    }
+                    else
+                    {
+                        dbContext.員工資料.Add(currentEmployeeData);
+                    }
+
+                    dbContext.SaveChanges();
+                    MessageBox.Show("數據已成功保存到數據庫。", "保存成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"保存數據時發生錯誤：{ex.Message}", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }*/
+        public void saveButton_Click(object sender, EventArgs e)
+        {
+            if (newForm != null)
+            {
+                newForm.saveButton_Click(sender, e);
             }
             else
-            {
-                MessageBox.Show("沒有打開的員工資料表單可以儲存。");
-            }
+                MessageBox.Show("Error");
         }
-    }
+
+
+
+}
 }

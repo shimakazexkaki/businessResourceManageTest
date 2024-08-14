@@ -106,9 +106,9 @@
         #endregion
 
         private ToolStrip toolStrip1;
-        private ToolStripButton addButton;
+        public ToolStripButton addButton;
         private ToolStripButton editButton;
-        private ToolStripButton saveButton;
+        public ToolStripButton saveButton;
         private ToolStripButton 列印PToolStripButton;
         private ToolStripSeparator toolStripSeparator;
         private ToolStripButton deleteButton;

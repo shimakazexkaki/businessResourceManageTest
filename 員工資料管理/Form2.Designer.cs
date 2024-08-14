@@ -30,6 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             Panel1 = new Panel();
+            IsActivecheck = new CheckBox();
+            CreatedDatedate = new DateTimePicker();
+            CreatedBycombo = new ComboBox();
+            Notestxt = new TextBox();
+            EmergencyContactPhonetxt = new TextBox();
+            HomePhonetxt = new TextBox();
+            MailingPhonetxt = new TextBox();
+            Mailing_Addresstxt = new TextBox();
+            Educationcombo = new ComboBox();
+            Positioncombo = new ComboBox();
+            Departmentcombo = new ComboBox();
+            resignationdate = new DateTimePicker();
+            Hiredate = new DateTimePicker();
+            MobilePhonetxt = new TextBox();
+            Gendercombo = new ComboBox();
+            EmergencyContactNametxt = new TextBox();
+            HomeAddresstxt = new TextBox();
             BirthDatedate = new DateTimePicker();
             IDNumbertxt = new TextBox();
             Software_AccessRightstxt = new TextBox();
@@ -67,23 +84,6 @@
             EmployeeName = new Label();
             EmployeeID = new Label();
             dataGridView = new DataGridView();
-            HomeAddresstxt = new TextBox();
-            EmergencyContactNametxt = new TextBox();
-            Gendercombo = new ComboBox();
-            MobilePhonetxt = new TextBox();
-            Hiredate = new DateTimePicker();
-            resignationdate = new DateTimePicker();
-            Departmentcombo = new ComboBox();
-            Positioncombo = new ComboBox();
-            Educationcombo = new ComboBox();
-            Mailing_Addresstxt = new TextBox();
-            MailingPhonetxt = new TextBox();
-            HomePhonetxt = new TextBox();
-            EmergencyContactPhonetxt = new TextBox();
-            Notestxt = new TextBox();
-            CreatedBycombo = new ComboBox();
-            CreatedDatedate = new DateTimePicker();
-            IsActivecheck = new CheckBox();
             Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
@@ -147,6 +147,97 @@
             resources.ApplyResources(Panel1, "Panel1");
             Panel1.Name = "Panel1";
             Panel1.Paint += Panel1_Paint;
+            // 
+            // IsActivecheck
+            // 
+            resources.ApplyResources(IsActivecheck, "IsActivecheck");
+            IsActivecheck.Name = "IsActivecheck";
+            IsActivecheck.UseVisualStyleBackColor = true;
+            // 
+            // CreatedDatedate
+            // 
+            resources.ApplyResources(CreatedDatedate, "CreatedDatedate");
+            CreatedDatedate.Name = "CreatedDatedate";
+            // 
+            // CreatedBycombo
+            // 
+            CreatedBycombo.FormattingEnabled = true;
+            resources.ApplyResources(CreatedBycombo, "CreatedBycombo");
+            CreatedBycombo.Name = "CreatedBycombo";
+            // 
+            // Notestxt
+            // 
+            resources.ApplyResources(Notestxt, "Notestxt");
+            Notestxt.Name = "Notestxt";
+            // 
+            // EmergencyContactPhonetxt
+            // 
+            resources.ApplyResources(EmergencyContactPhonetxt, "EmergencyContactPhonetxt");
+            EmergencyContactPhonetxt.Name = "EmergencyContactPhonetxt";
+            // 
+            // HomePhonetxt
+            // 
+            resources.ApplyResources(HomePhonetxt, "HomePhonetxt");
+            HomePhonetxt.Name = "HomePhonetxt";
+            // 
+            // MailingPhonetxt
+            // 
+            resources.ApplyResources(MailingPhonetxt, "MailingPhonetxt");
+            MailingPhonetxt.Name = "MailingPhonetxt";
+            // 
+            // Mailing_Addresstxt
+            // 
+            resources.ApplyResources(Mailing_Addresstxt, "Mailing_Addresstxt");
+            Mailing_Addresstxt.Name = "Mailing_Addresstxt";
+            // 
+            // Educationcombo
+            // 
+            Educationcombo.FormattingEnabled = true;
+            resources.ApplyResources(Educationcombo, "Educationcombo");
+            Educationcombo.Name = "Educationcombo";
+            // 
+            // Positioncombo
+            // 
+            Positioncombo.FormattingEnabled = true;
+            resources.ApplyResources(Positioncombo, "Positioncombo");
+            Positioncombo.Name = "Positioncombo";
+            // 
+            // Departmentcombo
+            // 
+            Departmentcombo.FormattingEnabled = true;
+            resources.ApplyResources(Departmentcombo, "Departmentcombo");
+            Departmentcombo.Name = "Departmentcombo";
+            // 
+            // resignationdate
+            // 
+            resources.ApplyResources(resignationdate, "resignationdate");
+            resignationdate.Name = "resignationdate";
+            // 
+            // Hiredate
+            // 
+            resources.ApplyResources(Hiredate, "Hiredate");
+            Hiredate.Name = "Hiredate";
+            // 
+            // MobilePhonetxt
+            // 
+            resources.ApplyResources(MobilePhonetxt, "MobilePhonetxt");
+            MobilePhonetxt.Name = "MobilePhonetxt";
+            // 
+            // Gendercombo
+            // 
+            Gendercombo.FormattingEnabled = true;
+            resources.ApplyResources(Gendercombo, "Gendercombo");
+            Gendercombo.Name = "Gendercombo";
+            // 
+            // EmergencyContactNametxt
+            // 
+            resources.ApplyResources(EmergencyContactNametxt, "EmergencyContactNametxt");
+            EmergencyContactNametxt.Name = "EmergencyContactNametxt";
+            // 
+            // HomeAddresstxt
+            // 
+            resources.ApplyResources(HomeAddresstxt, "HomeAddresstxt");
+            HomeAddresstxt.Name = "HomeAddresstxt";
             // 
             // BirthDatedate
             // 
@@ -349,97 +440,6 @@
             dataGridView.Name = "dataGridView";
             dataGridView.ReadOnly = true;
             dataGridView.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // HomeAddresstxt
-            // 
-            resources.ApplyResources(HomeAddresstxt, "HomeAddresstxt");
-            HomeAddresstxt.Name = "HomeAddresstxt";
-            // 
-            // EmergencyContactNametxt
-            // 
-            resources.ApplyResources(EmergencyContactNametxt, "EmergencyContactNametxt");
-            EmergencyContactNametxt.Name = "EmergencyContactNametxt";
-            // 
-            // Gendercombo
-            // 
-            Gendercombo.FormattingEnabled = true;
-            resources.ApplyResources(Gendercombo, "Gendercombo");
-            Gendercombo.Name = "Gendercombo";
-            // 
-            // MobilePhonetxt
-            // 
-            resources.ApplyResources(MobilePhonetxt, "MobilePhonetxt");
-            MobilePhonetxt.Name = "MobilePhonetxt";
-            // 
-            // Hiredate
-            // 
-            resources.ApplyResources(Hiredate, "Hiredate");
-            Hiredate.Name = "Hiredate";
-            // 
-            // resignationdate
-            // 
-            resources.ApplyResources(resignationdate, "resignationdate");
-            resignationdate.Name = "resignationdate";
-            // 
-            // Departmentcombo
-            // 
-            Departmentcombo.FormattingEnabled = true;
-            resources.ApplyResources(Departmentcombo, "Departmentcombo");
-            Departmentcombo.Name = "Departmentcombo";
-            // 
-            // Positioncombo
-            // 
-            Positioncombo.FormattingEnabled = true;
-            resources.ApplyResources(Positioncombo, "Positioncombo");
-            Positioncombo.Name = "Positioncombo";
-            // 
-            // Educationcombo
-            // 
-            Educationcombo.FormattingEnabled = true;
-            resources.ApplyResources(Educationcombo, "Educationcombo");
-            Educationcombo.Name = "Educationcombo";
-            // 
-            // Mailing_Addresstxt
-            // 
-            resources.ApplyResources(Mailing_Addresstxt, "Mailing_Addresstxt");
-            Mailing_Addresstxt.Name = "Mailing_Addresstxt";
-            // 
-            // MailingPhonetxt
-            // 
-            resources.ApplyResources(MailingPhonetxt, "MailingPhonetxt");
-            MailingPhonetxt.Name = "MailingPhonetxt";
-            // 
-            // HomePhonetxt
-            // 
-            resources.ApplyResources(HomePhonetxt, "HomePhonetxt");
-            HomePhonetxt.Name = "HomePhonetxt";
-            // 
-            // EmergencyContactPhonetxt
-            // 
-            resources.ApplyResources(EmergencyContactPhonetxt, "EmergencyContactPhonetxt");
-            EmergencyContactPhonetxt.Name = "EmergencyContactPhonetxt";
-            // 
-            // Notestxt
-            // 
-            resources.ApplyResources(Notestxt, "Notestxt");
-            Notestxt.Name = "Notestxt";
-            // 
-            // CreatedBycombo
-            // 
-            CreatedBycombo.FormattingEnabled = true;
-            resources.ApplyResources(CreatedBycombo, "CreatedBycombo");
-            CreatedBycombo.Name = "CreatedBycombo";
-            // 
-            // CreatedDatedate
-            // 
-            resources.ApplyResources(CreatedDatedate, "CreatedDatedate");
-            CreatedDatedate.Name = "CreatedDatedate";
-            // 
-            // IsActivecheck
-            // 
-            resources.ApplyResources(IsActivecheck, "IsActivecheck");
-            IsActivecheck.Name = "IsActivecheck";
-            IsActivecheck.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
