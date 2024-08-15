@@ -35,13 +35,18 @@
             editButton = new ToolStripButton();
             deleteButton = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
+            toolStripLabel1 = new ToolStripLabel();
+            filterComboBox1 = new ToolStripComboBox();
+            toolStripLabel2 = new ToolStripLabel();
+            filterText = new ToolStripTextBox();
+            filterButton = new ToolStripButton();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(40, 40);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { addButton, saveButton, editButton, deleteButton, toolStripSeparator1 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { addButton, saveButton, editButton, deleteButton, toolStripSeparator1, toolStripLabel1, filterComboBox1, toolStripLabel2, filterText, filterButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(1262, 47);
@@ -73,7 +78,8 @@
             editButton.Image = (Image)resources.GetObject("editButton.Image");
             editButton.Name = "editButton";
             editButton.Size = new Size(44, 44);
-            editButton.Text = "開啟(&O)";
+            editButton.Text = "修改(&O)";
+            editButton.Click += editButton_Click;
             // 
             // deleteButton
             // 
@@ -81,12 +87,50 @@
             deleteButton.Image = (Image)resources.GetObject("deleteButton.Image");
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(44, 44);
-            deleteButton.Text = "剪下(&U)";
+            deleteButton.Text = "刪除(&U)";
+            deleteButton.Click += deleteButton_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 47);
+            // 
+            // toolStripLabel1
+            // 
+            toolStripLabel1.Margin = new Padding(370, 1, 0, 2);
+            toolStripLabel1.Name = "toolStripLabel1";
+            toolStripLabel1.Size = new Size(39, 44);
+            toolStripLabel1.Text = "欄位";
+            // 
+            // filterComboBox1
+            // 
+            filterComboBox1.Items.AddRange(new object[] { "員工姓名", "身分證號", "性別", "行動電話", "部門", "職務", "學歷", "通訊地址", "通訊電話", "住家電話", "住家地址", "聯絡人姓名", "連絡人電話", "LDF_登入密碼", "LDF_操作權限", "軟體登入帳號", "軟體登入密碼", "軟體權限群組", "軟體登入權限", "備註", "建檔人" });
+            filterComboBox1.Name = "filterComboBox1";
+            filterComboBox1.Size = new Size(121, 47);
+            filterComboBox1.Click += toolStripComboBox1_Click;
+            // 
+            // toolStripLabel2
+            // 
+            toolStripLabel2.Margin = new Padding(10, 1, 0, 2);
+            toolStripLabel2.Name = "toolStripLabel2";
+            toolStripLabel2.Size = new Size(39, 44);
+            toolStripLabel2.Text = "含有";
+            // 
+            // filterText
+            // 
+            filterText.BorderStyle = BorderStyle.FixedSingle;
+            filterText.Name = "filterText";
+            filterText.Size = new Size(100, 47);
+            // 
+            // filterButton
+            // 
+            filterButton.BackColor = SystemColors.ButtonShadow;
+            filterButton.ImageTransparentColor = Color.Indigo;
+            filterButton.Margin = new Padding(5, 1, 0, 2);
+            filterButton.Name = "filterButton";
+            filterButton.Size = new Size(43, 44);
+            filterButton.Text = "篩選";
+            filterButton.Click += filterButton_Click;
             // 
             // Form1
             // 
@@ -109,12 +153,12 @@
         public ToolStripButton addButton;
         private ToolStripButton editButton;
         public ToolStripButton saveButton;
-        private ToolStripButton 列印PToolStripButton;
-        private ToolStripSeparator toolStripSeparator;
         private ToolStripButton deleteButton;
-        private ToolStripButton 複製CToolStripButton;
-        private ToolStripButton 貼上PToolStripButton;
         private ToolStripSeparator toolStripSeparator1;
-        private ToolStripButton 說明LToolStripButton;
+        private ToolStripLabel toolStripLabel1;
+        private ToolStripLabel toolStripLabel2;
+        public ToolStripButton filterButton;
+        public ToolStripComboBox filterComboBox1;
+        public ToolStripTextBox filterText;
     }
 }

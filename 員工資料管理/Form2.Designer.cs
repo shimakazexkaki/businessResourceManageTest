@@ -440,6 +440,7 @@
             dataGridView.Name = "dataGridView";
             dataGridView.ReadOnly = true;
             dataGridView.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView.RowEnter += dataGridView_RowEnter_1;
             // 
             // Form2
             // 

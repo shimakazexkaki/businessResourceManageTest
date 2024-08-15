@@ -115,7 +115,7 @@ namespace 員工資料管理
         {
 
             newForm = new Form2(this);
-            
+
             //newForm.OnDataSaved += newForm_OnDataSaved;
             newForm.MdiParent = this;
             newForm.Show();
@@ -158,7 +158,38 @@ namespace 員工資料管理
                 MessageBox.Show("Error");
         }
 
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (newForm != null)
+            {
+                newForm.editButton_Click(sender, e);
+            }
+            else MessageBox.Show("編輯檔案失敗");
+        }
 
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            if (newForm != null)
+            {
+                newForm.deleteButton_Click(sender, e);
+            }
+            else MessageBox.Show("刪除檔案失敗");
+        }
 
-}
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filterButton_Click(object sender, EventArgs e)
+        {
+            string searchTarget = filterText.Text;
+            string combobox = filterComboBox1.Text;
+            if (newForm != null)
+            {
+                newForm.filterButton_Click(sender, e, searchTarget, combobox);
+            }
+            else MessageBox.Show("尚未開啟檔案");
+        }
+    }
 }
